@@ -1,0 +1,111 @@
+html {
+  font-size: 100%;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.row{
+  max-width: 100%;
+}
+
+.cd-intro {
+  margin: 1em auto !important;
+}
+
+.cd-headline.type .cd-words-wrapper {
+  width: 100% !important;
+}
+
+.cd-headline {
+  font-size: 2rem !important;
+}
+.wrapper {
+  position: relative;
+  margin: 60px auto 0px auto ;
+  width: 200px;
+  height: 130px;
+}
+
+.recording-animation{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#transcribed-text-wrapper{
+  display: none;
+}
+
+.fi-microphone {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 4em;
+  color: #008cba;
+
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.active-microphone{
+  color: "#0078a0";
+  -webkit-animation: microphone 1.5s infinite linear;
+}
+
+
+.recording-animation .circle{
+  margin: 0px auto;
+
+  width:80px;
+  height:80px;
+  border-top:10px solid #9b59b6;
+  border-bottom:10px solid #9b59b6;
+  border-left:10px solid transparent;
+  border-right:10px solid transparent;
+  border-radius:100%;
+
+  animation: circle-animation 1.5s infinite linear;
+  -webkit-animation: circle-animation 1.5s infinite linear;
+}
+
+
+@keyframes circle-animation {
+    0% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+    50% {border-top:10px solid #3498db;border-bottom:10px solid #3498db;}
+    100% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+}
+
+
+@-webkit-keyframes circle-animation {
+    0% {transform: rotate(0deg); border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+    50% {transform: rotate(180deg); border-top:10px solid #3498db;border-bottom:10px solid #3498db; }
+    100% {transform: rotate(360deg); border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+}
+
+
+@keyframes microphone {
+    0% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+    50% {border-top:10px solid #3498db;border-bottom:10px solid #3498db;}
+    100% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+}
+
+@-webkit-keyframes microphone {
+  0% { color: #c60f13 }
+  50% { color:#b20000 }
+  100% { color: #c60f13 }
+}
+
+#controls{
+
+
+}
+
+.switch{
+
+  /*position: relative;
+  left: 50%;
+  right: 50%;
+  float: left;*/
+}
+.checkbox-label{
+  vertical-align: top;
+}

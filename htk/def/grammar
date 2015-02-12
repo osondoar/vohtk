@@ -1,0 +1,24 @@
+$answer = YES | NO ;
+$s = SIL;
+$number = ZERO | ONE | TWO | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE | TEN | ELEVEN | TWELVE | THIRTEEN | FOURTEEN | FIFTEEN | SIXTEEN | SEVENTEEN | EIGHTEEN | NINETEEN | TWENTY | MAXIMUM | MAX;
+$city = NEWYORK | CHICAGO | SPAIN | LIBEREC | PRAGUE | CZECH REPUBLIC | GERMANY | FRANCE | ITALY | DALLAS | DETROIT | WASHINGTON | GRANADA | MADRID | HUELMA;
+$restaurantType = MEXICAN | SPANISH | JAPANESE | CHINESE | VEGETARIAN ;
+$searchItemPl = [$restaurantType] RESTAURANTS | HOTELS | THEATERS | CINEMAS | CHURCHES | METRO STATIONS | TRAIN STATIONS | TRAM STOPS | PHARMACIES | HOSPITALS;
+$searchItemSg = [$restaurantType] RESTAURANT | HOTEL | THEATER | CINEMA | CHURCH | METRO STATION | TRAIN STATION | TRAM STOP | PHARMACY | HOSPITAL;
+$place = IN $city ;
+$morePlaces = $city | HERE ;
+$searchWord = SEARCH FOR | LOOK FOR | FIND ;
+$adjetive = NEARBY | CLOSE | CHEAP | EXPENSIVE ;
+$superlative = NEAREST | CLOSEST | CHEAPEST | MOST EXPENSIVE | BEST  ;  
+$search = $searchWord [$adjetive] $searchItemPl [$place] | $searchWord THE $superlative $searchItemSg [$place] ;
+$directions = DIRECTIONS FROM $morePlaces TO $morePlaces;
+$coordinate = UP | DOWN | LEFT | RIGHT ;
+$mapControl = ZOOM IN | ZOOM OUT | MOVE $coordinate ;
+$setZoom = SET ZOOM LEVEL TO $number ;
+$go = GO TO $city ;
+$viewmode = SATELLITE | ROADMAP;
+$view = VIEW IN $viewmode MODE ;
+$find = FIND ME | WHERE AM I ;
+$question = WHERE ARE THE $superlative $searchItemPl [$place] | WHERE IS THE $superlative $searchItemSg [$place]  ;
+$command = $search | $directions |$mapControl | $setZoom | $view | $go | $find | $question ;
+( SENT-START $command SENT-END )
