@@ -289,7 +289,6 @@ jQuery(function($) {
       e1.html(e2.html());
       e2.html(x);
     }
-    console.log("trying");
 
 
     // $('.cd-words-wrapper').append('<b class="is-visible">' + utteranceExamples[i] + '</b>');
